@@ -1,0 +1,131 @@
+/* style.css */
+
+body{
+    background-color: #f5f7f6;
+    font-family: Arial, sans-serif;
+}
+
+
+/* NAVBAR */
+
+.custom-navbar{
+    background: linear-gradient(90deg,#157347,#198754);
+}
+
+
+/* HERO */
+
+.hero-section{
+    padding: 50px 0;
+}
+
+.hero-image{
+    max-width: 500px;
+}
+
+
+/* CARDS */
+
+.feature-card{
+    border: none;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.feature-card:hover{
+    transform: translateY(-8px);
+}
+
+.feature-icon{
+    font-size: 4rem;
+    color: #198754;
+}
+
+/*shopping-list*/
+
+
+
+.shopping-hero{
+    background-color: #eaf7ef;
+}
+
+.shopping-page-icon{
+    font-size: 4rem;
+    color: #198754;
+}
+
+.form-card,
+.list-card{
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/*Inventory*/
+
+.inventory-hero{
+    background-color: #eef6ff;
+}
+
+.inventory-page-icon{
+    font-size: 4rem;
+    color: #0d6efd;
+}
+
+/* recipes*/
+
+.recipes-hero{
+    background-color: #fff4e6;
+}
+
+.recipes-page-icon{
+    font-size: 4rem;
+    color: #fd7e14;
+}
+
+.recipe-card{
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.recipe-card:hover{
+    transform: translateY(-8px);
+}
+
+.recipe-img{
+    height: 220px;
+    object-fit: cover;
+}
+
+/* WEEKLY PLANNER */
+
+.planner-hero{
+    background-color: #eef9ff;
+}
+
+.planner-page-icon{
+    font-size: 4rem;
+    color: #0dcaf0;
+}
+
+.planner-card{
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.planner-card:hover{
+    transform: translateY(-8px);
+}
+
+.planner-img{
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}

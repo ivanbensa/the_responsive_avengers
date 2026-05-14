@@ -5,10 +5,763 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Grocery Buddy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="index.html">
+            <i class="fa-solid fa-basket-shopping"></i>
+            GroceryMate
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shopping-list.html">Shopping List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="inventory.html">Inventory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recipes.html">Recipes</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
+<section class="shopping-hero py-5">
+
+    <div class="container text-center">
+
+        <i class="fa-solid fa-cart-shopping shopping-page-icon mb-3"></i>
+
+        <h1 class="display-5 fw-bold">
+
+            Shopping List
+
+        </h1>
+
+        <p class="lead">
+
+            Add groceries, choose quantity, enter price and calculate your total.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="card form-card mb-5">
+            <div class="card-body p-4">
+                <h2 class="h4 mb-4">
+                    Add new item
+                </h2>
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label for="itemName" class="form-label">Item name</label>
+                        <input type="text" class="form-control" id="itemName" placeholder="Example: Milk">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="itemQuantity" class="form-label">Quantity</label>
+                        <select class="form-select" id="itemQuantity">
+                            <option selected>Choose...</option>
+                            <option value="1">1 item</option>
+                            <option value="2">2 items</option>
+                            <option value="3">3 items</option>
+                            <option value="4">4 items</option>
+                            <option value="5">5 items</option>
+                            <option value="10">10 items</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="itemPrice" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="itemPrice" placeholder="€">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button type="button" class="btn btn-success w-100">
+                            <i class="fa-solid fa-plus"></i>
+                            Add
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card list-card">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="h4 m-0">
+                        Added items
+                    </h2>
+                    <span class="badge text-bg-success fs-6">
+                        Total: 12.40 €
+                    </span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-bottle-water text-primary me-2"></i>
+                                Milk
+                            </td>
+                            <td>2</td>
+                            <td>1.50 €</td>
+                            <td>3.00 €</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-warning me-2">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-bread-slice text-warning me-2"></i>
+                                Bread
+                            </td>
+                            <td>1</td>
+                            <td>2.20 €</td>
+                            <td>2.20 €</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-warning me-2">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-egg text-danger me-2"></i>
+                                Eggs
+                            </td>
+                            <td>10</td>
+                            <td>0.72 €</td>
+                            <td>7.20 €</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-warning me-2">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HERO -->
+<section class="inventory-hero py-5">
+    <div class="container text-center">
+        <i class="fa-solid fa-box-open inventory-page-icon mb-3"></i>
+        <h1 class="display-5 fw-bold">
+            Home Inventory
+        </h1>
+        <p class="lead">
+            Track products you already have at home.
+        </p>
+    </div>
+</section>
+
+<!-- FORM -->
+<section class="py-5">
+    <div class="container">
+        <div class="card form-card mb-5">
+            <div class="card-body p-4">
+                <h2 class="h4 mb-4">
+                    Add inventory item
+                </h2>
+                <form class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">
+                            Product name
+                        </label>
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Example: Rice">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">
+                            Quantity
+                        </label>
+                        <select class="form-select">
+                            <option selected>
+                                Choose...
+                            </option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>5</option>
+                            <option>10</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">
+                            Price
+                        </label>
+                        <input type="number"
+                               class="form-control"
+                               placeholder="€">
+                    </div>
+                    <div class="col-md-2 d-flex align-items-end">
+                        <button class="btn btn-success w-100"
+                                type="button">
+                            <i class="fa-solid fa-plus"></i>
+                            Add
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- INVENTORY TABLE -->
+        <div class="card list-card">
+            <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h2 class="h4 m-0">
+                        Inventory Items
+                    </h2>
+                    <span class="badge text-bg-success fs-6">
+                        Total Value: 23.80 €
+                    </span>
+                </div>
+                <div class="table-responsive">
+                    <table class="table align-middle">
+                        <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total</th>
+                            <th class="text-end">Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-bowl-rice text-warning me-2"></i>
+                                Rice
+                            </td>
+                            <td>2</td>
+                            <td>3.50 €</td>
+                            <td>7.00 €</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-warning me-2">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-wine-bottle text-success me-2"></i>
+                                Olive Oil
+                            </td>
+                            <td>1</td>
+                            <td>8.80 €</td>
+                            <td>8.80 €</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-warning me-2">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Edit
+                                </button>
+                                <button class="btn btn-sm btn-outline-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa-solid fa-jar text-primary me-2"></i>
+                                Beans
+                            </td>
+                            <td>4</td>
+                            <td>2.00 €</td>
+                            <td>8.00 €</td>
+                            <td class="text-end">
+                                <button class="btn btn-sm btn-outline-warning me-2">
+                                    <i class="fa-solid fa-pen"></i>
+                                    Edit
+                                </button>
+
+                                <button class="btn btn-sm btn-outline-danger">
+
+                                    <i class="fa-solid fa-trash"></i>
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="recipes-hero py-5">
+    <div class="container text-center">
+        <i class="fa-solid fa-utensils recipes-page-icon mb-3"></i>
+
+        <h1 class="display-5 fw-bold">
+            Recipes
+        </h1>
+
+        <p class="lead">
+            Search recipes, check ingredients and estimate meal costs.
+        </p>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+
+        <div class="card form-card mb-5">
+            <div class="card-body p-4">
+
+                <h2 class="h4 mb-4">
+                    Search for a recipe
+                </h2>
+
+                <form class="row g-3">
+
+                    <div class="col-md-8">
+                        <label class="form-label">
+                            Recipe name
+                        </label>
+
+                        <input type="text"
+                               class="form-control"
+                               placeholder="Example: pasta, chicken, salad">
+                    </div>
+
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="button" class="btn btn-success w-100">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Search
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card recipe-card h-100">
+
+                    <img src="images/pasta.jpg"
+                         class="card-img-top recipe-img"
+                         alt="Pasta">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge text-bg-success mb-3">
+                            Italian
+                        </span>
+
+                        <h3 class="h5">
+                            Pasta with Tomato Sauce
+                        </h3>
+
+                        <p>
+                            Simple pasta recipe with tomato sauce,
+                            garlic and olive oil.
+                        </p>
+
+                        <ul id="sdfsdfsdf" class="list-unstyled small">
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Pasta
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Tomato sauce
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Olive oil
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <strong>
+                                Cost: 5.80 €
+                            </strong>
+
+                            <button class="btn btn-outline-success btn-sm">
+                                View recipe
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card recipe-card h-100">
+
+                    <img src="images/chicken.jpg"
+                         class="card-img-top recipe-img"
+                         alt="Chicken">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge text-bg-warning mb-3">
+                            Lunch
+                        </span>
+
+                        <h3 class="h5">
+                            Chicken Rice Bowl
+                        </h3>
+
+                        <p>
+                            Easy chicken meal with rice,
+                            vegetables and simple spices.
+                        </p>
+
+                        <ul class="list-unstyled small">
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Chicken
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Rice
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Vegetables
+                            </li>
+                        </ul>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <strong>
+                                Cost: 8.40 €
+                            </strong>
+
+                            <button class="btn btn-outline-success btn-sm">
+                                View recipe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card recipe-card h-100">
+
+                    <img src="images/salad.jpg"
+                         class="card-img-top recipe-img"
+                         alt="Salad">
+
+                    <div class="card-body p-4">
+
+                        <span class="badge text-bg-danger mb-3">
+                            Healthy
+                        </span>
+
+                        <h3 class="h5">
+                            Fresh Summer Salad
+                        </h3>
+
+                        <p>
+                            Light salad with fresh vegetables,
+                            cheese and dressing.
+                        </p>
+
+                        <ul class="list-unstyled small">
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Lettuce
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Tomato
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check text-success me-2"></i>
+                                Cheese
+                            </li>
+                        </ul>
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+                            <strong>
+                                Cost: 4.90 €
+                            </strong>
+                            <button class="btn btn-outline-success btn-sm">
+                                View recipe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WEEKLY PLANNER HERO -->
+
+<section class="planner-hero py-5">
+
+    <div class="container text-center">
+
+        <i class="fa-solid fa-calendar-days planner-page-icon mb-3"></i>
+
+        <h1 class="display-5 fw-bold">
+            Weekly Meal Planner
+        </h1>
+
+        <p class="lead">
+            Organize your meals for the next 7 days.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WEEKLY PLANNER -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="card form-card mb-5">
+
+            <div class="card-body p-4">
+
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+
+                    <div>
+                        <h2 class="h4 mb-1">
+                            Weekly Plan
+                        </h2>
+
+                        <p class="text-muted m-0">
+                            Generate and manage meals for the week.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-success">
+
+                        <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                        Generate Plan
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DAYS -->
+
+        <div class="row g-4">
+
+            <!-- MONDAY -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card planner-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                            <h3 class="h5 m-0">
+                                Monday
+                            </h3>
+
+                            <span class="badge text-bg-success">
+                                Italian
+                            </span>
+
+                        </div>
+
+                        <img src="images/pasta.jpg"
+                             class="img-fluid rounded planner-img mb-3"
+                             alt="Pasta">
+
+                        <h4 class="h6">
+                            Pasta with Tomato Sauce
+                        </h4>
+
+                        <p class="small text-muted">
+                            Easy pasta recipe for lunch or dinner.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+
+                            <strong>
+                                5.80 €
+                            </strong>
+
+                            <button class="btn btn-outline-success btn-sm">
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TUESDAY -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card planner-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                            <h3 class="h5 m-0">
+                                Tuesday
+                            </h3>
+
+                            <span class="badge text-bg-warning">
+                                Lunch
+                            </span>
+
+                        </div>
+
+                        <img src="images/chicken.jpg"
+                             class="img-fluid rounded planner-img mb-3"
+                             alt="Chicken">
+
+                        <h4 class="h6">
+                            Chicken Rice Bowl
+                        </h4>
+
+                        <p class="small text-muted">
+                            Chicken, rice and vegetables.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+
+                            <strong>
+                                8.40 €
+                            </strong>
+
+                            <button class="btn btn-outline-success btn-sm">
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- WEDNESDAY -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card planner-card h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                            <h3 class="h5 m-0">
+                                Wednesday
+                            </h3>
+
+                            <span class="badge text-bg-danger">
+                                Healthy
+                            </span>
+
+                        </div>
+
+                        <img src="images/salad.jpg"
+                             class="img-fluid rounded planner-img mb-3"
+                             alt="Salad">
+
+                        <h4 class="h6">
+                            Fresh Summer Salad
+                        </h4>
+
+                        <p class="small text-muted">
+                            Fresh vegetables with cheese.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center mt-4">
+
+                            <strong>
+                                4.90 €
+                            </strong>
+
+                            <button class="btn btn-outline-success btn-sm">
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
