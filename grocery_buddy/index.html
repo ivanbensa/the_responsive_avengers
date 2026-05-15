@@ -11,6 +11,8 @@
     <title>Grocery Buddy</title>
 </head>
 <body>
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold fs-3" href="index.html">
@@ -43,36 +45,29 @@
 
     </div>
 </nav>
+<!-- END OF NAVBAR -->
+
+<!-- SHOPPING LIST -->
 
 <section class="shopping-hero py-5" id="shopping">
-
     <div class="container text-center">
-
         <i class="fa-solid fa-cart-shopping shopping-page-icon mb-3"></i>
-
         <h1 class="display-5 fw-bold">
-
             Shopping List
-
         </h1>
-
         <p class="lead">
-
             Add groceries, choose quantity, enter price and calculate your total.
-
         </p>
-
     </div>
-
 </section>
 
 <section class="py-5">
     <div class="container">
         <div class="card form-card mb-5">
             <div class="card-body p-4">
-                <h2 class="h4 mb-4">
+                <h4 class="mb-4">
                     Add new item
-                </h2>
+                </h4>
                 <form class="row g-3">
                     <div class="col-md-4">
                         <label for="itemName" class="form-label">Item name</label>
@@ -103,16 +98,18 @@
                 </form>
             </div>
         </div>
+
         <div class="card list-card">
             <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="h4 m-0">
+                    <h4 class="m-0">
                         Added items
-                    </h2>
+                    </h4>
                     <span class="badge text-bg-success fs-6">
                         Total: 12.40 €
                     </span>
                 </div>
+
                 <div class="table-responsive">
                     <table class="table align-middle">
                         <thead>
@@ -124,6 +121,7 @@
                             <th class="text-end">Actions</th>
                         </tr>
                         </thead>
+
                         <tbody>
                         <tr>
                             <td>
@@ -184,13 +182,17 @@
                         </tr>
                         </tbody>
                     </table>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- HERO -->
+<!-- END OF SHOPPING LIST -->
+
+<!-- HOME INVENTORY -->
+
 <section class="inventory-hero py-5" id="inventory">
     <div class="container text-center">
         <i class="fa-solid fa-box-open inventory-page-icon mb-3"></i>
@@ -203,14 +205,13 @@
     </div>
 </section>
 
-<!-- FORM -->
 <section class="py-5">
     <div class="container">
         <div class="card form-card mb-5">
             <div class="card-body p-4">
-                <h2 class="h4 mb-4">
+                <h4 class="mb-4">
                     Add inventory item
-                </h2>
+                </h4>
                 <form class="row g-3">
                     <div class="col-md-4">
                         <label class="form-label">
@@ -257,13 +258,14 @@
         <div class="card list-card">
             <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="h4 m-0">
+                    <h4 class="m-0">
                         Inventory Items
-                    </h2>
+                    </h4>
                     <span class="badge text-bg-success fs-6">
                         Total Value: 23.80 €
                     </span>
                 </div>
+
                 <div class="table-responsive">
                     <table class="table align-middle">
                         <thead>
@@ -343,6 +345,10 @@
     </div>
 </section>
 
+<!-- END OF HOME INVENTORY -->
+
+<!-- RECIPES -->
+
 <section class="recipes-hero py-5" id="recipes">
     <div class="container text-center">
         <i class="fa-solid fa-utensils recipes-page-icon mb-3"></i>
@@ -359,63 +365,48 @@
 
 <section class="py-5">
     <div class="container">
-
         <div class="card form-card mb-5">
             <div class="card-body p-4">
-
                 <h2 class="h4 mb-4">
                     Search for a recipe
                 </h2>
-
                 <form class="row g-3">
-
                     <div class="col-md-8">
                         <label class="form-label">
                             Recipe name
                         </label>
-
                         <input type="text"
                                class="form-control"
                                placeholder="Example: pasta, chicken, salad">
                     </div>
-
                     <div class="col-md-4 d-flex align-items-end">
                         <button type="button" class="btn btn-success w-100">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             Search
                         </button>
                     </div>
-
                 </form>
-
             </div>
         </div>
 
         <div class="row g-4">
-
             <div class="col-md-6 col-lg-4">
                 <div class="card recipe-card h-100">
-
                     <img src="images/pasta.jpg"
                          class="card-img-top recipe-img"
                          alt="Pasta">
-
                     <div class="card-body p-4">
-
                         <span class="badge text-bg-success mb-3">
                             Italian
                         </span>
-
-                        <h3 class="h5">
+                        <h5>
                             Pasta with Tomato Sauce
-                        </h3>
-
+                        </h5>
                         <p>
                             Simple pasta recipe with tomato sauce,
                             garlic and olive oil.
                         </p>
-
-                        <ul id="sdfsdfsdf" class="list-unstyled small">
+                        <ul class="list-unstyled small">
                             <li>
                                 <i class="fa-solid fa-check text-success me-2"></i>
                                 Pasta
@@ -439,34 +430,26 @@
                                 View recipe
                             </button>
                         </div>
-
                     </div>
-
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-4">
                 <div class="card recipe-card h-100">
-
                     <img src="images/chicken.jpg"
                          class="card-img-top recipe-img"
                          alt="Chicken">
-
                     <div class="card-body p-4">
-
                         <span class="badge text-bg-warning mb-3">
                             Lunch
                         </span>
-
-                        <h3 class="h5">
+                        <h5>
                             Chicken Rice Bowl
-                        </h3>
-
+                        </h5>
                         <p>
                             Easy chicken meal with rice,
                             vegetables and simple spices.
                         </p>
-
                         <ul class="list-unstyled small">
                             <li>
                                 <i class="fa-solid fa-check text-success me-2"></i>
@@ -496,26 +479,20 @@
             </div>
             <div class="col-md-6 col-lg-4">
                 <div class="card recipe-card h-100">
-
                     <img src="images/salad.jpg"
                          class="card-img-top recipe-img"
                          alt="Salad">
-
                     <div class="card-body p-4">
-
                         <span class="badge text-bg-danger mb-3">
                             Healthy
                         </span>
-
-                        <h3 class="h5">
+                        <h5>
                             Fresh Summer Salad
-                        </h3>
-
+                        </h5>
                         <p>
                             Light salad with fresh vegetables,
                             cheese and dressing.
                         </p>
-
                         <ul class="list-unstyled small">
                             <li>
                                 <i class="fa-solid fa-check text-success me-2"></i>
@@ -545,38 +522,31 @@
     </div>
 </section>
 
-<!-- WEEKLY PLANNER HERO -->
-
-<section class="planner-hero py-5">
-
-    <div class="container text-center">
-
-        <i class="fa-solid fa-calendar-days planner-page-icon mb-3"></i>
-
-        <h1 class="display-5 fw-bold">
-            Weekly Meal Planner
-        </h1>
-
-        <p class="lead">
-            Organize your meals for the next 7 days.
-        </p>
-
-    </div>
-
-</section>
-
+<!-- END OF RECIPES -->
 
 <!-- WEEKLY PLANNER -->
 
-<section class="py-5" id="planner">
+<section class="planner-hero py-5" id="planner">
+    <div class="container text-center">
+        <i class="fa-solid fa-calendar-days planner-page-icon mb-3"></i>
+        <h1 class="display-5 fw-bold">
+            Weekly Meal Planner
+        </h1>
+        <p class="lead">
+            Organize your meals for the next 7 days.
+        </p>
+    </div>
+</section>
+
+<section class="py-5" >
     <div class="container">
         <div class="card form-card mb-5">
             <div class="card-body p-4">
                 <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
                     <div>
-                        <h2 class="h4 mb-1">
+                        <h4 class="mb-1">
                             Weekly Plan
-                        </h2>
+                        </h4>
                         <p class="text-muted m-0">
                             Generate and manage meals for the week.
                         </p>
@@ -587,172 +557,115 @@
                     </button>
                 </div>
             </div>
-
         </div>
 
-
         <!-- DAYS -->
-
         <div class="row g-4">
-
             <!-- MONDAY -->
-
             <div class="col-md-6 col-lg-4">
-
                 <div class="card planner-card h-100">
-
                     <div class="card-body p-4">
-
                         <div class="d-flex justify-content-between align-items-center mb-3">
-
-                            <h3 class="h5 m-0">
+                            <h5 class="m-0">
                                 Monday
-                            </h3>
-
+                            </h5>
                             <span class="badge text-bg-success">
                                 Italian
                             </span>
-
                         </div>
-
                         <img src="images/pasta.jpg"
                              class="img-fluid rounded planner-img mb-3"
                              alt="Pasta">
-
-                        <h4 class="h6">
+                        <h6>
                             Pasta with Tomato Sauce
-                        </h4>
-
+                        </h6>
                         <p class="small text-muted">
                             Easy pasta recipe for lunch or dinner.
                         </p>
-
                         <div class="d-flex justify-content-between align-items-center mt-4">
-
                             <strong>
                                 5.80 €
                             </strong>
-
                             <button class="btn btn-outline-success btn-sm">
                                 View
                             </button>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-
             <!-- TUESDAY -->
-
             <div class="col-md-6 col-lg-4">
-
                 <div class="card planner-card h-100">
-
                     <div class="card-body p-4">
-
                         <div class="d-flex justify-content-between align-items-center mb-3">
-
-                            <h3 class="h5 m-0">
+                            <h5 class="m-0">
                                 Tuesday
-                            </h3>
-
+                            </h5>
                             <span class="badge text-bg-warning">
                                 Lunch
                             </span>
-
                         </div>
-
                         <img src="images/chicken.jpg"
                              class="img-fluid rounded planner-img mb-3"
                              alt="Chicken">
-
-                        <h4 class="h6">
+                        <h6>
                             Chicken Rice Bowl
-                        </h4>
-
+                        </h6>
                         <p class="small text-muted">
                             Chicken, rice and vegetables.
                         </p>
-
                         <div class="d-flex justify-content-between align-items-center mt-4">
-
                             <strong>
                                 8.40 €
                             </strong>
-
                             <button class="btn btn-outline-success btn-sm">
                                 View
                             </button>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-
             <!-- WEDNESDAY -->
-
             <div class="col-md-6 col-lg-4">
-
                 <div class="card planner-card h-100">
-
                     <div class="card-body p-4">
-
                         <div class="d-flex justify-content-between align-items-center mb-3">
-
-                            <h3 class="h5 m-0">
+                            <h5 class="m-0">
                                 Wednesday
-                            </h3>
-
+                            </h5>
                             <span class="badge text-bg-danger">
                                 Healthy
                             </span>
-
                         </div>
-
                         <img src="images/salad.jpg"
                              class="img-fluid rounded planner-img mb-3"
                              alt="Salad">
-
-                        <h4 class="h6">
+                        <h6>
                             Fresh Summer Salad
-                        </h4>
-
+                        </h6>
                         <p class="small text-muted">
                             Fresh vegetables with cheese.
                         </p>
-
                         <div class="d-flex justify-content-between align-items-center mt-4">
-
                             <strong>
                                 4.90 €
                             </strong>
-
                             <button class="btn btn-outline-success btn-sm">
                                 View
                             </button>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
+<!-- END OF WEEKLY PLANNER -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/inventory.js"></script>
 </body>
 </html>
