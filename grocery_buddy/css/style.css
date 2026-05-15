@@ -5,6 +5,10 @@ body{
     font-family: Arial, sans-serif;
 }
 
+section{
+    scroll-margin-top: 90px;
+}
+
 
 /* NAVBAR */
 
